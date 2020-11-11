@@ -6,9 +6,8 @@ use panic_halt as _;
 use cortex_m;
 use cortex_m_rt::entry;
 
-use stm32f3xx_hal;
 use stm32f3xx_hal::prelude::*;
-use stm32f3xx_hal::{delay, pac, i2c, stm32};
+use stm32f3xx_hal::{self, delay, pac, i2c, stm32};
 
 const LCD_ADDRESS: u8 = 0x27;
 const En: u8 = 0x04;
